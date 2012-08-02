@@ -1,0 +1,26 @@
+NAME
+  HTTP-Server-PSGI-Mortal
+
+SYNOPSIS
+
+  my $server = HTTP::Server::PSGI::Mortal->new(%args);
+  $server->run($app); # run $app until a response emits 'TIME_TO_DIE'
+  
+  # now pursue program execution
+
+DESCRIPTION
+
+This server behaves exactly like L<HTTP::Server::PSGI>, except that whenever
+a response contains a true value in header C<TIME_TO_DIE>,
+the server's accept loop will stop.
+
+It may be useful if you want a program to become a HTTP server at some
+point, until a specific request ends the service and the program
+resumes normal execution.  This is what happens for example in
+L<Tree::Navigator::App::PerlDebug>, where a call to C<debug()> stops
+normal program execution, starts a web server to browse through
+datastructures and packages, until the web server is stopped through a
+C<_KILL> http request.
+
+AUTHOR
+  Laurent Dami
