@@ -24,7 +24,10 @@
       "build" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.36",
-            "Test::More" : 0
+            "LWP::UserAgent" : 0,
+            "Plack::Runner" : 0,
+            "Test::More" : 0,
+            "Test::TCP" : 0
          }
       },
       "configure" : {
@@ -34,6 +37,7 @@
       },
       "runtime" : {
          "requires" : {
+            "HTTP::Server::PSGI" : 0,
             "parent" : 0
          }
       }

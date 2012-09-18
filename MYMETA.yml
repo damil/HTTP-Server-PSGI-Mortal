@@ -5,7 +5,10 @@ author:
   - 'Laurent Dami <dami@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.36
+  LWP::UserAgent: 0
+  Plack::Runner: 0
   Test::More: 0
+  Test::TCP: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.36
 dynamic_config: 0
@@ -20,6 +23,7 @@ no_index:
     - inc
     - t
 requires:
+  HTTP::Server::PSGI: 0
   parent: 0
 resources:
   license: http://dev.perl.org/licenses/
