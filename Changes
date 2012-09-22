@@ -1,5 +1,12 @@
 Revision history for HTTP-Server-PSGI-Mortal
 
-0.01    18.09.2012
-        Initial release
+REMOVED FROM CPAN 23.09.2012
+(because Plack/HTTP-Server-PSGI now supports harakiri mode, which
+is redundant with the present module)
+
+0.02 18.09.2012
+  - Fix dependencies
+
+0.01 18.09.2012
+  - Initial release
 
